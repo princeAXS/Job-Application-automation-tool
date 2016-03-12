@@ -1,0 +1,22 @@
+{
+  "allJobSite":["linkedIn","workbridgeassociates","jobscore","Ziprecruiter","glassDoor","jobvite"],
+  "jobSitetoApply":["Ziprecruiter"],
+  "siteUrls":{
+    "linkedIn":"https://www.linkedin.com/",
+    "Ziprecruiter":"https://www.ziprecruiter.com/"
+  },
+  "jobSearchKeywords":["junior software engineer"],
+  "alljobSearchKeywords":["junior software engineer","Jr software engineer","Jr web developer","jr full stack","full stack","web developer"],
+  "browser":["Firefox"],
+  "userCredentials":{
+    "Ziprecruiter": {
+     "user":"phemraja@usc.edu",
+      "pass" : "9597451273ph"
+    },
+    "linkedIn":{
+      "user":"uni5prince@gmail.com",
+      "pass":"savageph8893"
+    }
+  }
+
+}
