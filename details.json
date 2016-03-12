@@ -1,6 +1,6 @@
 {
   "allJobSite":["linkedIn","workbridgeassociates","jobscore","Ziprecruiter","glassDoor","jobvite"],
-  "jobSitetoApply":["Ziprecruiter"],
+  "jobSitetoApply":["linkedIn"],
   "siteUrls":{
     "linkedIn":"https://www.linkedin.com/",
     "Ziprecruiter":"https://www.ziprecruiter.com/"
@@ -10,12 +10,12 @@
   "browser":["Firefox"],
   "userCredentials":{
     "Ziprecruiter": {
-     "user":"phemraja@usc.edu",
-      "pass" : "9597451273ph"
+     "user":"user",
+      "pass" : "pass"
     },
     "linkedIn":{
-      "user":"uni5prince@gmail.com",
-      "pass":"savageph8893"
+      "user":"user",
+      "pass":"pass"
     }
   }
 
