@@ -12,6 +12,7 @@ require 'webdriver-user-agent'
 require "watir-webdriver/wait"
 require 'thread/pool'
 require 'colorize'
+require 'watir-scroll'
 
 Watir.default_timeout = 180
 #################################################################################################
@@ -29,21 +30,45 @@ $current_browser = "Firefox"
 begin
 
   $details["jobSitetoApply"].each do |site|
+    begin
+      case site
+        when "Ziprecruiter"
+          $diffJobSites.jobZepRecruiter(site)
+          $pool.shutdown
 
-    case site
-      when "Ziprecruiter"
-        $diffJobSites.jobZepRecruiter(site)
-        $pool.shutdown
-      when "linkedIn"
-        $diffJobSites.jobLinkedIn(site)
-        $pool.shutdown
+        when "linkedIn"
+          $diffJobSites.icims()
+          $diffJobSites.jobLinkedIn(site)
+          $pool.shutdown
+
+        when "workBridge"
+          $diffJobSites.jobWorkBridge(site)
+          $pool.shutdown
+
+        when "glassDoor"
+          $diffJobSites.jobglassDoor(site)
+          $pool.shutdown
+
+        when "smartRecruiter"
+          $diffJobSites.jobsmartRecruiter(site)
+          $pool.shutdown
+
+
+
+      end
+    rescue => e
+      puts("problem occured with "+site)
+      puts(e.message)
+      puts(e.backtrace)
 
     end
 
+
+
   end
   puts("Successfully excecuted for all sites")
-    # $utility.kill_browser("Desktop",browser);
-    # pool.shutdown
+    $utility.kill_browser("Desktop",browser);
+    pool.shutdown
 
 
 rescue => e

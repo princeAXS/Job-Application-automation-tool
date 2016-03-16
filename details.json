@@ -1,22 +1,43 @@
 {
-  "allJobSite":["linkedIn","workbridgeassociates","jobscore","Ziprecruiter","glassDoor","jobvite"],
+  "allJobSite":["linkedIn","smartRecruiter","workbridgeassociates","jobscore","Ziprecruiter","glassDoor","jobvite"],
   "jobSitetoApply":["linkedIn"],
   "siteUrls":{
     "linkedIn":"https://www.linkedin.com/",
-    "Ziprecruiter":"https://www.ziprecruiter.com/"
+    "Ziprecruiter":"https://www.ziprecruiter.com/",
+    "workBridge":"http://www.workbridgeassociates.com/",
+    "glassDoor":"https://www.glassdoor.com",
+    "smartRecruiter": "https://jobs.smartrecruiters.com/"
   },
-  "jobSearchKeywords":["junior software engineer"],
-  "alljobSearchKeywords":["junior software engineer","Jr software engineer","Jr web developer","jr full stack","full stack","web developer"],
+  "jobSearchKeywords":["Jr web developer","Junior web developer"],
+  "alljobSearchKeywords":["Jr software engineer","Jr web developer","Junior web developer","jr full stack","junior full stack","junior software engineer","junior software developer"],
   "browser":["Firefox"],
   "userCredentials":{
     "Ziprecruiter": {
-     "user":"user",
-      "pass" : "pass"
+     "user":"phemraja@usc.edu",
+      "pass" : "9597451273ph"
     },
     "linkedIn":{
-      "user":"user",
-      "pass":"pass"
-    }
+      "user":"uni5prince@gmail.com",
+      "pass":"savageph8893"
+    },
+    "glassDoor":{
+      "user": "phemraja@usc.edu",
+      "pass" : "savageph8893"
+    },
+    "smartRecruiter" :{
+      "user":"",
+      "pass":""
+    },
+
+
+    "basic":{
+      "firstName" : "Prince",
+      "lastName" : "Hemrajani",
+      "phNo" : "3237159868",
+      "email": "phemraja@usc.edu"
+    },
+    "resume": "/Users/prince/Desktop/PRINCE_HEMRAJANI_RESUME.pdf",
+    "resumeToPaste" : ""
   }
 
 }
