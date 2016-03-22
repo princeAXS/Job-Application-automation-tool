@@ -67,15 +67,6 @@ class DifferentSitesJob < Utility
 
 
 
-          # begin
-          #   browser.li(:id =>"facet-E", :class => "facet").button(:class => "facet-toggle").click
-          # rescue
-          #   begin
-          #     browser.li(:id =>"facet-SB", :class => "facet").button(:class => "facet-toggle").click
-          #   rescue
-          #     browser.li(:id =>"facet-E", :class => "facet").button(:class => "facet-toggle").click
-          #   end
-          # end
 
           browser.scroll.to browser.li(:id =>"facet-C", :class => "facet").button(:class => "facet-toggle")
           browser.li(:id =>"facet-E", :class => "facet").button(:class => "facet-toggle").click
@@ -93,46 +84,55 @@ class DifferentSitesJob < Utility
                 browser.scroll.to browser.li(:class => "result", :index =>j)
                 browser.li(:class => "result", :index =>j).link(:class => "result-image").click
 
-                if browser.span(:class => "quick-apply").exists? and not browser.div(:class => "applied-text").exist?
+                title = browser.h1(:class => "title").text.downcase
+                if ["stack", "software","java","web","application","php","front end"].any? { |titleKeyword| title.include? titleKeyword }
+                  if browser.span(:class => "quick-apply").exists? and not browser.div(:class => "applied-text").exist?
 
-                  sleep(3)
-                  browser.button(:id => "apply-job-button").click
+                    sleep(3)
+                    #browser.scroll.to browser.button(:id => "apply-job-button")
+                    browser.button(:id => "apply-job-button").click
 
-                  sleep(1)
-                  browser.select_list(:id, "email-selector").select_value("phemraja@usc.edu")
-                  browser.file_field(:id,"file-browse-input").set($details["userCredentials"]["resume"])
+                    sleep(1)
+                    browser.select_list(:id, "email-selector").select_value("phemraja@usc.edu")
+                    browser.file_field(:id,"file-browse-input").set($details["userCredentials"]["resume"])
 
-                  sleep(2)
-                  browser.button(:id => "send-application-button").click
+                    sleep(2)
+                    browser.button(:id => "send-application-button").click
 
-                  sleep(2)
-                elsif browser.link(:id => "offsite-apply-button").exists?
-                  browser.link(:id => "offsite-apply-button").click
+                    sleep(2)
+                    puts browser.url.white.on_green
+                  elsif browser.link(:id => "offsite-apply-button").exists?
+                    browser.link(:id => "offsite-apply-button").click
 
-                  begin
-                    browser.windows.last.use do
-                      if(browser.url.include?("roberthalf"))
-                        puts(browser.url)
-                        roberthalf(browser)
-                      elsif(browser.url.include?("beaconhillstaffing"))
-                        puts(browser.url)
-                        beacon(browser)
-                      elsif(browser.url.include?("catsone"))
-                        puts(browser.url)
-                        catsone(browser)
-                      elsif(browser.url.include?("strategicitstaffing"))
-                        puts(browser.url)
-                        strategic(browser)
-                      elsif(browser.url.include?("ziprecruiter"))
-                        puts(browser.url)
-                        zipRecruit(browser)
+                    begin
+                      browser.windows.last.use do
+                        # puts browser.url.white.on_yellow
+                        if(browser.url.include?("roberthalf"))
+                          roberthalf(browser)
+                        elsif(browser.url.include?("beaconhillstaffing"))
+                          beacon(browser)
+                        elsif(browser.url.include?("catsone"))
+                          catsone(browser)
+                        elsif(browser.url.include?("strategicitstaffing"))
+                          strategic(browser)
+                        elsif(browser.url.include?("ziprecruiter"))
+                          zipRecruit(browser)
+                        elsif(browser.url.include?("applytojob"))
+                          applytojobfromLinkedIn(browser)
+                        elsif(browser.url.include?("jobvite"))
+                          jobvite(browser)
+                        elsif(browser.url.include?("jobtap"))
+                          jobtap(browser)
+                        else
+                          puts browser.url
+                        end
+                        browser.window.close
                       end
-                      browser.window.close
+                    rescue => e
+                      puts(e.message)
                     end
-                  rescue => e
-                    puts(e.message)
-                  end
 
+                  end
                 end
                 browser.back
               rescue =>e
@@ -158,6 +158,248 @@ class DifferentSitesJob < Utility
   end
 # ---------------------------------- sub function for linked in job application --------------------------------
 
+  # def jobtap()
+  def jobtap(browser)
+    # browser = $utility.launch_browser("Desktop");
+    # browser.window.maximize
+    #
+    # browser = $utility.browser_goto(browser,"https://applicant.jobtap.com/jobs/apply/ad65b10afc999c659089ef232b4f235e?utm_source=lnkd&utm_medium=freeboard&utm_campaign=Relevante-Software%20Engineer-8782&utm_content=02/29/2016&sid=796c776b-0f3c-4ab9-b81a-390ac05e9fd2")
+
+    begin
+
+      status = $utility.setAnyTextField("FirstName", "id",$details["userCredentials"]["basic"]["firstName"], browser)
+      status = $utility.setAnyTextField("LastName", "id",$details["userCredentials"]["basic"]["lastName"], browser)
+      status = $utility.setAnyTextField("EmailAddress", "id",$details["userCredentials"]["basic"]["email"], browser)
+      status = $utility.setAnyTextField("Phone", "id",$details["userCredentials"]["basic"]["phNo"], browser)
+      status = $utility.setAnyTextField("PostalCode", "id","90007", browser)
+
+      browser.file_field(:type,"file").set($details["userCredentials"]["resume"])
+      browser.link(:id => "btnPasteCoverLetter").click
+      browser.textarea(:id => "txtArPstCvrLetter").set $details["userCredentials"]["CV"]
+
+
+      browser.input(:id => "Apply").click
+
+      puts browser.url.white.on_green
+    rescue => e
+      puts browser.url.white.on_red
+      puts e.message
+      # puts e.backtrace
+    end
+ end
+
+  def jobvite()
+  # def jobvite(browser)
+    browser = $utility.launch_browser("Desktop");
+    browser.window.maximize
+
+    browser = $utility.browser_goto(browser,"http://jobs.jobvite.com/careers/aspera/job/oqDPXfwz")
+
+    begin
+
+      begin
+        browser.div(:class => "action").link.click
+      rescue => e
+        begin
+          browser.p(:class => "btn_right").link.click
+        rescue => e
+          begin
+            browser.div(:class => "applybtn").link.click
+          rescue => e
+            begin
+              browser.div(:class => "jv-job-detail-top-actions").link.click
+            rescue => e
+              puts e.message
+            end
+          end
+        end
+      end
+
+      browser.div(:id => "jvApplyWithSection").img.click
+      sleep(2)
+      browser.div(:class => "jvdlgtext").iframe(:id => "File1").file_field(:type,"file").set($details["userCredentials"]["resume"])
+      browser.div(:class => "jvdlgtext").input.click
+      sleep(5)
+      status = $utility.setAnyTextField("jvfirstname", "id",$details["userCredentials"]["basic"]["firstName"], browser)
+      status = $utility.setAnyTextField("jvlastname", "id",$details["userCredentials"]["basic"]["lastName"], browser)
+      status = $utility.setAnyTextField("jvemail", "id",$details["userCredentials"]["basic"]["email"], browser)
+      status = $utility.setAnyTextField("jvphone", "id",$details["userCredentials"]["basic"]["phNo"], browser)
+      status = $utility.setAnyTextField("jvfld-x-sV9Vfwb", "id","Los Angeles", browser)
+
+      begin
+        browser.text_field(:id => "jvfld-x-XV9VfwG").set "CA"
+      rescue =>  e
+        browser.text_field(:id => "Text1").set "CA"
+      end
+
+
+
+      begin
+        browser.select_list(:id, "jvfld-x9P9VfwM").select_value("No")
+      rescue => e
+        puts e.message
+      end
+
+
+      browser.textarea(:id => "jvcoverletter").set $details["userCredentials"]["CV"]
+
+      browser.div(:id => "jvAttachSocialProfileSection").img(:index => 1).click
+
+      browser.windows.last.use do
+        browser.windows.last.use do
+          linkedinWindow(browser)
+        end
+      end
+
+
+      begin
+        browser.scroll.to browser.p(:class => "btn-left")
+        browser.p(:class => "btn-left").click
+      rescue => e
+        begin
+          browser.scroll.to browser.input(:type => "submit")
+          browser.input(:type => "submit").click
+        rescue => e
+          browser.scroll.to browser.p(:class => "btn_right").link
+          browser.p(:class => "btn_right").link.click
+        end
+      end
+      puts browser.url.white.on_green
+
+    rescue => e
+      begin
+        browser.scroll.to browser.input(:type => "button")
+        browser.input(:type => "button").click
+        browser.img.click
+        browser.windows.last.use do
+          linkedinWindow(browser)
+        end
+        status = $utility.setAnyTextField("jvfirstname", "id",$details["userCredentials"]["basic"]["firstName"], browser)
+        status = $utility.setAnyTextField("jvlastname", "id",$details["userCredentials"]["basic"]["lastName"], browser)
+        status = $utility.setAnyTextField("jvemail", "id",$details["userCredentials"]["basic"]["email"], browser)
+        status = $utility.setAnyTextField("jvphone", "id",$details["userCredentials"]["basic"]["phNo"], browser)
+
+        begin
+          status = $utility.setAnyTextField("jvfld-xVxrVfwy", "id","uni5prince", browser)
+        rescue => e
+          puts e.message
+        end
+
+        begin
+          browser.select_list(:id, "jvfld-xkBhVfwR").select_value("Yes")
+        rescue =>e
+          puts e.message
+        end
+
+        browser.textarea(:id => "jvcoverletter").set $details["userCredentials"]["CV"]
+
+        browser.scroll.to browser.input(:type => "submit")
+        browser.input(:type => "submit").click
+        puts browser.url.white.on_green
+
+
+      rescue => e
+        puts browser.url.white.on_red
+        puts e.message
+        # puts e.backtrace
+      end
+    end
+  end
+
+  def linkedinWindow(browser)
+    begin
+      status = $utility.setAnyTextField("session_key-oauthSAuthorizeForm", "id",$details["userCredentials"]["linkedIn"]["user"], browser)
+      status = $utility.setAnyTextField("session_password-oauthSAuthorizeForm", "id",$details["userCredentials"]["linkedIn"]["pass"], browser)
+
+      browser.input(:type => "submit").when_present.click
+
+    rescue =>e
+      begin
+        status = $utility.setAnyTextField("session_key-oauth2SAuthorizeForm", "id",$details["userCredentials"]["linkedIn"]["user"], browser)
+        status = $utility.setAnyTextField("session_password-oauth2SAuthorizeForm", "id",$details["userCredentials"]["linkedIn"]["pass"], browser)
+
+        browser.input(:type => "submit").when_present.click
+      rescue => e
+        browser.input(:type => "submit").click
+      end
+    end
+  end
+
+  # def applytojobfromLinkedIn()
+  def applytojobfromLinkedIn(browser)
+    # browser = $utility.launch_browser("Desktop");
+    # browser.window.maximize
+    #
+    # browser = $utility.browser_goto(browser,"http://cultivationcapital.applytojob.com/apply/job_20160127170104_9KX8ERXVQOS2Q2YQ/Full-Stack-Software-Engineer?source=LILI")
+
+
+    begin
+
+      status = $utility.setAnyTextField("resumator-firstname-value", "id",$details["userCredentials"]["basic"]["firstName"], browser)
+      status = $utility.setAnyTextField("resumator-lastname-value", "id",$details["userCredentials"]["basic"]["lastName"], browser)
+      status = $utility.setAnyTextField("resumator-email-value", "id",$details["userCredentials"]["basic"]["email"], browser)
+      status = $utility.setAnyTextField("resumator-address-value", "id","1226 W 30th st", browser)
+      status = $utility.setAnyTextField("resumator-city-value", "id","Los Angeles", browser)
+      status = $utility.setAnyTextField("resumator-state-value", "id","CA", browser)
+      status = $utility.setAnyTextField("resumator-postal-value", "id","90007", browser)
+      status = $utility.setAnyTextField("resumator-phone-value", "id",$details["userCredentials"]["basic"]["phNo"], browser)
+
+
+      browser.scroll.to browser.link(:id => "resumator-choose-upload")
+      browser.link(:id => "resumator-choose-upload").click
+
+      browser.file_field(:type,"file").set($details["userCredentials"]["resume"])
+
+
+
+      begin
+        browser.select_list(:id, "resumator-citizen-value").select_value("20")
+      rescue => e
+        puts e.message
+      end
+
+      begin
+        browser.select_list(:id, "resumator-relocate-value").select_value("1")
+      rescue => e
+        puts e.message
+      end
+
+      begin
+        status = $utility.setAnyTextField("resumator-salary-value", "id","$80k+", browser)
+      rescue => e
+        puts e.message
+      end
+
+      begin
+        status = $utility.setAnyTextField("resumator-coverletter-value", "id",$details["userCredentials"]["CV"], browser)
+      rescue => e
+        puts e.message
+        end
+
+      begin
+        status = $utility.setAnyTextField("resumator-college-value", "id","University of Southern California", browser)
+      rescue => e
+        puts e.message
+      end
+
+      status = $utility.setAnyTextField("resumator-wmyu-value", "id",$details["userCredentials"]["whyUnique"], browser)
+
+      begin
+        browser.input(:id => "resumator-submit-resume").click
+      rescue => e
+        browser.link(:id => "resumator-submit-resume").click
+      end
+
+
+      puts browser.url.white.on_green
+    rescue => e
+      puts browser.url.white.on_red
+      puts e.message
+      # puts e.backtrace
+    end
+  end
+
+
   def icims()
     browser = $utility.launch_browser("Desktop");
     browser.window.maximize
@@ -168,13 +410,15 @@ class DifferentSitesJob < Utility
 
       browser.iframe(:id => "icims_content_iframe").div(:class => "iCIMS_SocialLoginButtonContainer").link(:class => "socialLoginButton", :index => 0).click
 
-      begin
-        status = $utility.setAnyTextField("session_key-oauthAuthorizeForm", "id",$details["userCredentials"]["linkedIn"]["user"], browser)
-        status = $utility.setAnyTextField("session_password-oauthAuthorizeForm", "id",$details["userCredentials"]["linkedIn"]["pass"], browser)
+      browser.windows.last.use do
+        begin
+          status = $utility.setAnyTextField("session_key-oauth2SAuthorizeForm", "id",$details["userCredentials"]["linkedIn"]["user"], browser)
+          status = $utility.setAnyTextField("session_password-oauth2SAuthorizeForm", "id",$details["userCredentials"]["linkedIn"]["pass"], browser)
 
-        browser.input(:type => "submit").when_present.click
-      rescue => e
-        browser.input(:type => "submit").click
+          browser.input(:type => "submit").when_present.click
+        rescue => e
+          browser.input(:type => "submit").click
+        end
       end
 
       browser.iframe(:id => "icims_content_iframe").file_field(:type,"file").set($details["userCredentials"]["resume"])
@@ -185,10 +429,13 @@ class DifferentSitesJob < Utility
       browser.iframe(:id => "icims_content_iframe").select_list(:id, "rcf3048").select_value("Internet - LinkedIn")
 
 
-      browser.input(:type => "submit").click
+      browser.iframe(:id => "icims_content_iframe").input(:type => "submit").when_present.click
 
+      puts browser.url.white.on_green
     rescue => e
+      puts browser.url.white.on_red
       puts e.message
+      # puts e.backtrace
     end
 
   end
@@ -210,15 +457,22 @@ class DifferentSitesJob < Utility
 
       browser.input(:type => "submit").click
       sleep(5)
+      puts browser.url.white.on_green
     rescue => e
+      puts browser.url.white.on_red
       puts e.message
     end
 
   end
 
   def catsone(browser)
-    begin
-      browser.div(:id=> "jobDetails").div(:class=> "actionButtons").link.click
+   begin
+      begin
+        browser.div(:id=> "jobDetails").div(:class=> "actionButtons").link.click
+      rescue => e
+        puts e.message
+      end
+
 
       browser.file_field(:type,"file").set($details["userCredentials"]["resume"])
 
@@ -231,10 +485,17 @@ class DifferentSitesJob < Utility
       status = $utility.setAnyTextField("0_field_7", "id","90007", browser)
       status = $utility.setAnyTextField("0_field_8", "id",$details["userCredentials"]["basic"]["phNo"], browser)
 
+      # begin
+      # rescue => e
+      #   puts e.message
+      # end
+
       browser.input(:type => "submit").click
       sleep(5)
+      puts browser.url.white.on_green
 
-    rescue => e
+   rescue => e
+     puts browser.url.white.on_red
       puts e.message
     end
   end
@@ -267,7 +528,9 @@ class DifferentSitesJob < Utility
 
       browser.link(:id => "dnn_ctr595_EMB_Jobs_Resume_btnSubmit2").click
       sleep(3)
+      puts browser.url.white.on_green
     rescue => e
+      puts browser.url.white.on_red
       puts e.message
     end
   end
@@ -280,6 +543,8 @@ class DifferentSitesJob < Utility
     begin
       browser.div(:class => "topApplyButtons").div(:class => "applyButtons").ul(:class => "applyMenu").li(:index => 2).click
 
+      sleep(5)
+
       begin
         status = $utility.setAnyTextField("session_key-oauthAuthorizeForm", "id",$details["userCredentials"]["linkedIn"]["user"], browser)
         status = $utility.setAnyTextField("session_password-oauthAuthorizeForm", "id",$details["userCredentials"]["linkedIn"]["pass"], browser)
@@ -288,7 +553,9 @@ class DifferentSitesJob < Utility
       rescue => e
         browser.input(:type => "submit").click
       end
+      puts browser.url.white.on_green
     rescue => e
+      puts browser.url.white.on_red
       puts e.message
     end
 
@@ -316,7 +583,9 @@ class DifferentSitesJob < Utility
       sleep(2)
 
       browser.button(:type => "submit").click
+      puts browser.url.white.on_green
     rescue => e
+      puts browser.url.white.on_red
       puts(e.message)
     end
 end
@@ -343,7 +612,9 @@ end
       status = $utility.setAnyTextField("zip", "id","90007", browser)
 
       browser.input(:id => "submit_btn").click
+      puts browser.url.white.on_green
     rescue => e
+      puts browser.url.white.on_red
       puts(e.message)
     end
   end
@@ -359,31 +630,67 @@ end
     status = $utility.setAnyTextField("resumator-email-value", "id",$details["userCredentials"]["basic"]["email"], browser)
     status = $utility.setAnyTextField("first_name", "id",$details["userCredentials"]["basic"]["firstName"], browser)
     status = $utility.setAnyTextField("first_name", "id",$details["userCredentials"]["basic"]["firstName"], browser)
+    puts browser.url.white.on_green
 
   end
 
   def greenhouse(browser)
+  # def greenhouse()
+
+    # browser = $utility.launch_browser("Desktop");
+    # browser.window.maximize
+    #
+    # browser = $utility.browser_goto(browser,"https://boards.greenhouse.io/vungle/jobs/185646?t=e14v6k#.VvCJJBIrIUE");
+    begin
 
 
-    browser.scroll.to browser.input(:id => "first_name")
-    status = $utility.setAnyTextField("first_name", "id",$details["userCredentials"]["basic"]["firstName"], browser)
-    status = $utility.setAnyTextField("last_name", "id",$details["userCredentials"]["basic"]["lastName"], browser)
-    status = $utility.setAnyTextField("phone", "id",$details["userCredentials"]["basic"]["phNo"], browser)
-    status = $utility.setAnyTextField("email", "id",$details["userCredentials"]["basic"]["email"], browser)
-    # status = $utility.setAnyTextField("job_application_location", "id","Los Angeles, CA, United States", browser)
-    browser.div(:class=> "attach-or-paste ").div(:class=> "link-container").link(:index => 2).click
-    browser.textarea(:id => "resume_text").set File.read("/Users/prince/Desktop/ PRINCE_HEMRAJANI_RESUME.docx")
-    status = $utility.setAnyTextField("job_application_answers_attributes_0_text_value", "id","University of Southern California", browser)
-    status = $utility.setAnyTextField("job_application_answers_attributes_1_text_value", "id","Computer Science", browser)
-    status = $utility.setAnyTextField("job_application_answers_attributes_2_text_value", "id","https://www.linkedin.com/in/princehemrajani", browser)
-    status = $utility.setAnyTextField("job_application_answers_attributes_4_text_value", "id","LinkedIn", browser)
-    browser.select_list(:id, "job_application_answers_attributes_5_boolean_value").select_value(1)
-    browser.select_list(:id, "job_application_answers_attributes_6_boolean_value").select_value(0)
-    status = $utility.setAnyTextField("job_application_location", "id","Los Angeles, CA, United States", browser)
-    browser.input(:id => "submit_app").click
+      browser.scroll.to browser.button(:class => "apply-with-linkedin-button")
+      browser.button(:class => "apply-with-linkedin-button").click
+      browser.windows.last.use do
+        linkedinWindow(browser)
+      end
+      browser.scroll.to browser.input(:id => "first_name")
+      status = $utility.setAnyTextField("first_name", "id",$details["userCredentials"]["basic"]["firstName"], browser)
+      status = $utility.setAnyTextField("last_name", "id",$details["userCredentials"]["basic"]["lastName"], browser)
+      status = $utility.setAnyTextField("phone", "id",$details["userCredentials"]["basic"]["phNo"], browser)
+      status = $utility.setAnyTextField("email", "id",$details["userCredentials"]["basic"]["email"], browser)
+      begin
+        status = $utility.setAnyTextField("job_application_location", "id","Los Angeles, CA, United States", browser)
+      rescue => e
+        puts e.message
+      end
+      browser.div(:class=> "attach-or-paste", :index => 1).div(:class=> "link-container").link(:index => 3).click
+      browser.textarea(:id => "cover_letter_text").set $details["userCredentials"]["CV"]
+      puts browser.url.white.on_green
+
+      begin
+        browser.input(:id => "job_application_eu_privacy_consent").click
+      rescue => e
+        puts browser.url.white.on_red
+        puts e.message
+      end
+
+      browser.input(:id => "submit_app").click
+
+      # browser.scroll.to browser.input(:id => "first_name")
+      # status = $utility.setAnyTextField("job_application_location", "id","Los Angeles, CA, United States", browser)
+      # browser.div(:class=> "cover_letter_chosen ").div(:class=> "link-container").link(:index => 2).click
+      # browser.textarea(:id => "resume_text").set $details["userCredentials"]["CV"]
+      # status = $utility.setAnyTextField("job_application_answers_attributes_0_text_value", "id","University of Southern California", browser)
+      # status = $utility.setAnyTextField("job_application_answers_attributes_1_text_value", "id","Computer Science", browser)
+      # status = $utility.setAnyTextField("job_application_answers_attributes_2_text_value", "id","https://www.linkedin.com/in/princehemrajani", browser)
+      # status = $utility.setAnyTextField("job_application_answers_attributes_4_text_value", "id","LinkedIn", browser)
+      # browser.select_list(:id, "job_application_answers_attributes_5_boolean_value").select_value(1)
+      # browser.select_list(:id, "job_application_answers_attributes_6_boolean_value").select_value(0)
+      # status = $utility.setAnyTextField("job_application_location", "id","Los Angeles, CA, United States", browser)
+      # browser.input(:id => "submit_app").click
 
 
     sleep(5)
+    rescue => e
+      puts browser.url.white.on_red
+      puts(e.message)
+    end
 
   end
 
