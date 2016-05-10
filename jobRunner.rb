@@ -6,6 +6,7 @@ require 'rest_client'
 require 'json'
 require './utility.rb'
 require './jobFrameworl.rb'
+require './linkedInHelper.rb'
 # require "./framework/utilityLogin.rb"
 # require "./framework/emailer.rb"
 require 'webdriver-user-agent'
@@ -22,6 +23,7 @@ Watir.default_timeout = 180
 $details = JSON.parse(File.read('./details.json'))
 $utility = Utility.new
 $diffJobSites = DifferentSitesJob.new
+$linkedIn = LinkedInhelper.new
 
 $pool = Thread.pool(1)
 $current_browser = "Firefox"
@@ -37,7 +39,7 @@ begin
           $pool.shutdown
 
         when "linkedIn"
-          $diffJobSites.icims()
+          # $linkedIn.jobvite()
           $diffJobSites.jobLinkedIn(site)
           $pool.shutdown
 

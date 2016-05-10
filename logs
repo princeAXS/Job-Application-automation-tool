@@ -1,0 +1,236 @@
+/usr/bin/ruby -e at_exit{sleep(1)};$stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift) /Users/prince/.gem/ruby/2.0.0/gems/ruby-debug-ide-0.6.0/bin/rdebug-ide --disable-int-handler --evaluation-timeout 10 --rubymine-protocol-extensions --port 50921 --dispatcher-port 50922 -- /Users/prince/Desktop/Job-Application-automation-tool/jobRunner.rb
+Fast Debugger (ruby-debug-ide 0.6.0, debase 0.2.2.beta6, file filtering is supported) listens on 127.0.0.1:50921
+Fast Debugger (ruby-debug-ide 0.6.0, debase 0.2.2.beta6, file filtering is supported) listens on 127.0.0.1:50924
+https://www.cybercoders.com/register?menu=0&posId=DN-1268701SWENG&ad=linkedin
+https://und.edu/finance-operations/human-resources-payroll/careers/secure/job-openings-external.cfm?category=3000+Professional&AppliTrackJobId=2382_37440&AppliTrackLayoutMode=detail&AppliTrackViewPosting=1
+https://careers-mitchell.icims.com/jobs/6479/software-development-engineer-%2528.net-java%2529-level-1-2/login?jtsrc=http%3A%2F%2Fwww.linkedin.com%2Fstatic%3Fkey%3Dadvertising_info%26trk%3Dhb_ft_ads&jtsrcid=3854&iisn=LinkedIn&iis=JobTarget&jtrfr=https%3A%2F%2Fwww.linkedin.com
+unable to locate element, using {:id=>"apply-job-button", :tag_name=>"button"}
+https://hire.jobvite.com/CompanyJobs/Careers.aspx?c=qtX9Vfwe&j=oUn20fw3&nl=1&page=Job+Description&s=LINKEDIN
+unable to locate element, using {:type=>"button", :tag_name=>"input"}
+http://www.workbridgeassociates.com/tech-jobs/los-angeles-ca/software-engineering/software-engineer/257308
+https://www.ziprecruiter.com/jobs/onestop-internet-e5c858a4/software-engineer-c8d7c55d?mid=1595&source=feed-linkedin
+unable to locate element, using {:class=>"topApplyButtons", :tag_name=>"div"}
+http://www.hulu.com/jobs/?p=job/ozHv2fwx/apply&nl=1
+http://careers.wpromote.com/apply/job_20160212200818_1VKJPN1XKC1DUNKB/Software-Engineer?source=LILI
+https://www.disabledperson.com/jobs/8829863-software-engineer
+http://jobs.medtronic.com/california/engineering/jobid9401814-software-engineer-jobs?utm_source=LINKEDIN&utm_medium=referrer
+http://chk.tbe.taleo.net/chk06/ats/careers/requisition.jsp?org=HSNTECH&cws=1&rid=112
+http://usccareers.usc.edu/los-angeles/information-technology/jobid8167002-software-engineer-jobs?utm_source=LINKEDIN&utm_medium=referrer
+https://www.randstadusa.com/jobs/search/rt/software-engineer_burbank_11156479/?utm_source=LINKEDIN&utm_medium=referrer
+unable to locate element, using {:id=>"email-selector", :tag_name=>"select"}
+0> browser.scroll.to browser.button(:id => "apply-job-button")
+=> undefined local variable or method `browser' for #<Net::BufferedIO io=#<TCPSocket:0x007fe07ac84508>>
+
+https://hire.jobvite.com/CompanyJobs/Careers.aspx?c=qp69Vfwj&s=LINKEDIN&nl=1&page=Apply&j=oK8O2fws
+unable to locate element, using {:type=>"button", :tag_name=>"input"}
+http://hire.jobvite.com/CompanyJobs/Careers.aspx?c=qbG9VfwF&s=LINKEDIN&nl=1&page=Apply&j=oqgH2fw9
+unable to locate element, using {:type=>"button", :tag_name=>"input"}
+https://intel.taleo.net/careersection/10000/jobdetail.ftl?job=790919&src=UNV-11802
+unable to locate element, using {:id=>"resumator-citizen-value", :tag_name=>"select"}
+unable to locate element, using {:id=>"resumator-relocate-value", :tag_name=>"select"}
+Locating textareas with '#text_field' is deprecated. Please, use '#textarea' method instead.
+Locating textareas with '#text_field' is deprecated. Please, use '#textarea' method instead.
+http://gumgum.applytojob.com/apply/confirm/job_20160301205546_EIPCQUJUJO9XGT7N
+0> browser.scroll.to browser.button(:id => "apply-job-button")
+=> nil
+
+0> browser.button(:id => "apply-job-button").click
+=> Element is not clickable at point (310, 16.716659545898438). Other element would receive the click: <h2 id="in-premium-logo" class="logo"></h2>
+
+0> browser.button(:id => "apply-job-button").click
+=> nil
+
+0> j=16
+=> 16
+
+https://hire.jobvite.com/CompanyJobs/Careers.aspx?c=qp69Vfwj&s=LINKEDIN&nl=1&page=Apply&j=oK8O2fws
+unable to locate element, using {:type=>"button", :tag_name=>"input"}
+http://hire.jobvite.com/CompanyJobs/Careers.aspx?c=qbG9VfwF&s=LINKEDIN&nl=1&page=Apply&j=oqgH2fw9
+unable to locate element, using {:type=>"button", :tag_name=>"input"}
+https://intel.taleo.net/careersection/10000/jobdetail.ftl?job=790919&src=UNV-11802
+unable to locate element, using {:id=>"resumator-citizen-value", :tag_name=>"select"}
+unable to locate element, using {:id=>"resumator-relocate-value", :tag_name=>"select"}
+Locating textareas with '#text_field' is deprecated. Please, use '#textarea' method instead.
+Locating textareas with '#text_field' is deprecated. Please, use '#textarea' method instead.
+http://gumgum.applytojob.com/apply/confirm/job_20160301205546_EIPCQUJUJO9XGT7N
+http://renaissance.submit4jobs.com/index.cfm?fuseaction=85377.viewjobdetail&CID=85377&JID=217535&source=LinkedIn
+https://external-esri.icims.com/jobs/5115/software-engineer/job?mode=job&iis=Job%2BBoard&iisn=LinkedIn
+https://www.ziprecruiter.com/jobs/frequency-8c73d9d7/software-engineer-4bbec900?mid=1595&source=feed-linkedin
+unable to locate element, using {:class=>"applyButtons", :tag_name=>"div"}
+https://www.brightedge.com/careers
+https://jobs.rayjobs.com/tgwebhost/searchresults.aspx?PartnerId=25258&SiteId=5368&Function=LinkQuery&LinkId=1498699&codes=LIUP
+https://www.ziprecruiter.com/jobs/frequency-8c73d9d7/software-engineer-4bbec900?mid=1595&source=feed-linkedin
+unable to locate element, using {:class=>"applyButtons", :tag_name=>"div"}
+http://engineering.thingamajob.com/jobs/California/Software-Engineer/3533979
+http://jobs.fenixintl.com/apply/212e53365c6a5d4746650605036750785f59310b3f34370d212812502b57062f140746/Software-Engineer?source=LILI&sid=KA1inZlsvW613WcOjmnQfuu8ccKdqgRbQSt
+https://jobs-genomichealth.icims.com/jobs/4499/software-engineer/job?mode=job&iis=Job%2BBoard&iisn=LinkedIn&mobile=false&width=1170&height=500&bga=true&needsRedirect=false&jan1offset=-480&jun1offset=-420
+https://careers-appliedminds.icims.com/jobs/1233/software-engineer/job?mode=job&iis=Job%2BBoard&iisn=LinkedIn
+https://external-g2-inc.icims.com/jobs/2578/software-engineer/job?mode=job&iis=Job%2BBoard&iisn=LinkedIn
+https://hire.jobvite.com/CompanyJobs/Careers.aspx?c=qKI9Vfwg&s=LINKEDIN&nl=1&page=Apply&j=ooTM2fwP
+unable to locate element, using {:type=>"button", :tag_name=>"input"}
+http://chk.tbe.taleo.net/chk05/ats/careers/requisition.jsp?org=POC&cws=1&rid=419
+http://www.hirebridge.com/v3/Jobs/JobDetails.aspx?jid=380459&cid=6563#.VvCkHRja4Xw
+https://www.ziprecruiter.com/jobs/appleone-1dfd7557/software-engineer-23c91cc5?mid=1595&source=feed-linkedin
+unable to locate element, using {:class=>"topApplyButtons", :tag_name=>"div"}
+https://www.roberthalf.com/technology/job-search/westlake-village-ca/software-engineer/43580709?shwAppMsg=true
+https://mint.peopleanswers.com/pa/testPortalSmallBusinessLocationSelect.do?random=zVa9DJuxGuYm0WJ3&request_token=TbCakKsJ--cl1kTaqy0tRnCqEiQXvtkmKiDHMkaKHUI&pc=584369&country=1&geoSearchMode=5&src=pechanga&lang=1&jobs=452554
+http://information-technology.thingamajob.com/jobs/California/Software-Engineer/3531003
+https://jobs-agilysys.icims.com/jobs/5647/software-engineer/job?mode=job&iis=Job%2BBoard&iisn=LinkedIn
+http://amewas.applicantstack.com/x/detail/a2hcrhc4jr1h/aa1b?noia=1
+https://careers-kronos.icims.com/jobs/12593/software-engineer/job?mode=job&iis=Job%2BBoard&iisn=LinkedIn&mobile=false&width=675&height=500&bga=true&needsRedirect=false&jan1offset=-480&jun1offset=-420
+https://us-external-vubiquity.icims.com/jobs/2108/software-engineer-%28java%29/job?iis=LINKEDIN&iisn=linkedin.com
+https://www.ziprecruiter.com/candidate/zipresume/verify?linkedin_apply=1&quiz_id=7aa265ec
+https://johnsoncontrols.taleo.net/careersection/10000/jobdetail.ftl?job=WD30026822032&lang=en&media_id=28186&src=LinkedIn_Slots
+https://www.smartrecruiters.com/ScalityInc/90132156-software-engineer
+https://cw.na1.hgncloud.com/vendavo/loadJobPostingDetails.do?jobPostingID=101881&source=jobList
+https://www.ziprecruiter.com/jobs/the-posey-company-78cbedf0/software-engineer-a4f48b62?mid=1595&source=feed-linkedin
+unable to locate element, using {:class=>"topApplyButtons", :tag_name=>"div"}
+https://external-keywcorp.icims.com/jobs/4494/software-engineer/job?mode=job&iis=Job%2BBoard&iisn=LinkedIn
+unable to locate element, using {:id=>"jvfld-xkBhVfwR", :tag_name=>"select"}
+https://app.jobvite.com/CompanyJobs/Careers.aspx?c=qSd9VfwT&j=oud21fwu&s=LINKEDIN&nl=1&page=Apply
+https://career4.successfactors.com/career?career_ns=job_listing&company=EA&career_job_req_id=81122
+https://applicant.jobtap.com/jobs/apply/ad65b10afc999c659089ef232b4f235e?utm_source=lnkd&utm_medium=freeboard&utm_campaign=Relevante-Software%20Engineer-8782&utm_content=02/29/2016&sid=796c776b-0f3c-4ab9-b81a-390ac05e9fd2
+https://careers.macb.com/careers.aspx?adata=ELmwLmDnfw9YC87NVWt7R4aF44OA5k3vBuy%2bpJnFo4fGfELNYWwcvpISnTmiesSairWxizXWLzOO2LmD%2fGc45CppE0KFxO%2be8lEnzP1ErSffRd93F1MXX9WCIWvEwwFgEYyaIhzUueLnEWvWLnj3nivIpmM9K0%2fnjHJbh8LoQ0dvPniTgrIa4JhLxsq%2f9bW0og%3d%3d
+http://jobs.jobvite.com/careers/aspera/job/oqDPXfwz
+unable to locate element, using {:type=>"button", :tag_name=>"input"}
+https://us-amazon.icims.com/jobs/372110/software-engineer/job?mode=job&iis=Job%2BBoard&iisn=LinkedIn
+https://chm.tbe.taleo.net/chm03/ats/careers/requisition.jsp?org=TRIMBLE&cws=1&rid=8192
+https://us-external-vubiquity.icims.com/jobs/2108/software-engineer-%28java%29/job?iis=LINKEDIN&iisn=linkedin.com
+https://jobs.rayjobs.com/tgwebhost/searchresults.aspx?PartnerId=25258&SiteId=5368&Function=LinkQuery&LinkId=1498699&codes=LIUP
+https://www.ziprecruiter.com/jobs/fltr-87f23bf0/software-developer-engineer-e-commerce-php-css-js-etc-7aa265ec?mid=1595&source=feed-linkedin
+Element is not clickable at point (1078.9000244140625, 20.666671752929688). Other element would receive the click: <div class="content"></div>
+https://www.ziprecruiter.com/jobs/fltr-87f23bf0/software-developer-engineer-net-c-e-commerce-api-9291e779?mid=1595&source=feed-linkedin
+Element is not clickable at point (1078.9000244140625, 20.666671752929688). Other element would receive the click: <div class="content"></div>
+0> browser.send_keys [:command, :add]
+=> ""
+
+0> browser.send_keys [:command, :add]
+=> ""
+
+0> browser.send_keys [:command, :subtract]
+=> ""
+
+0> browser.send_keys [:command, :subtract]
+=> ""
+
+0> browser.send_keys [:command, :subtract]
+=> ""
+
+
+
+
+
+
+
+/usr/bin/ruby -e at_exit{sleep(1)};$stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift) /Users/prince/.gem/ruby/2.0.0/gems/ruby-debug-ide-0.6.0/bin/rdebug-ide --disable-int-handler --evaluation-timeout 10 --rubymine-protocol-extensions --port 60931 --dispatcher-port 60932 -- /Users/prince/Desktop/Job-Application-automation-tool/jobRunner.rb
+Fast Debugger (ruby-debug-ide 0.6.0, debase 0.2.2.beta6, file filtering is supported) listens on 127.0.0.1:60931
+Fast Debugger (ruby-debug-ide 0.6.0, debase 0.2.2.beta6, file filtering is supported) listens on 127.0.0.1:60934
+https://www.ziprecruiter.com/jobs/platinum-people-llc-d07efeac/full-stack-software-engineer-7075040c?mid=1595&source=feed-linkedin
+https://www.honest.com/careers/job/104573?gh_jid=104573&gh_src=lenq3x
+http://veritix.hrmdirect.com/employment/job-opening.php?req=324235&utm_source=LINKEDIN&utm_medium=referrer
+http://hire.jobvite.com/CompanyJobs/Careers.aspx?c=qVY9VfwH&j=o59d0fwb&nl=1&page=Job+Description&s=LINKEDIN
+unable to locate element, using {:class=>"action", :tag_name=>"div"}
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:536:in `assert_element_found'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:508:in `assert_exists'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:561:in `ensure_context'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:545:in `locate'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:505:in `assert_exists'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:114:in `click'
+/Users/prince/Desktop/Job-Application-automation-tool/jobFrameworl.rb:157:in `jobvite'
+/Users/prince/Desktop/Job-Application-automation-tool/jobFrameworl.rb:121:in `block (3 levels) in jobLinkedIn'
+/Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.53.0/lib/selenium/webdriver/common/target_locator.rb:73:in `window'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/window.rb:193:in `use'
+/Users/prince/Desktop/Job-Application-automation-tool/jobFrameworl.rb:106:in `block (2 levels) in jobLinkedIn'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:67:in `call'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:67:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:405:in `block (2 levels) in spawn_thread'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:372:in `loop'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:372:in `block in spawn_thread'
+https://jobs-neustar.icims.com/jobs/6043/full-stack-software-engineer/job?iis=LINKEDIN&iisn=linkedin.com
+http://sni-technology.jobs.net/en-us/job/United-States/Full-Stack-Software-Engineer/J3J2R95W7NQYQ1JP9N8/?utm_source=LINKEDIN&utm_medium=referrer
+https://jobs.walmart.com/us/jobs/666775-5022/SAN-BRUNO-CA-Full-Stack-Software-Engineer?codes=LINKEDIN
+http://surfline.applytojob.com/apply/job_20151221204101_74XBYD0IZR0VMRRB/Full-Stack-Software-Engineer?source=LILI
+unable to locate element, using {:id=>"resumator-relocate-value", :tag_name=>"select"}
+Locating textareas with '#text_field' is deprecated. Please, use '#textarea' method instead.
+Locating textareas with '#text_field' is deprecated. Please, use '#textarea' method instead.
+https://careers.jobscore.com/careers/wheelhouseenterprisesinc/jobs/full-stack-software-engineer-a1XeV4yw8r5BFreMg-44q7?utm_source=LINKEDIN&utm_medium=referrer
+https://careers.jobscore.com/careers/dialpad/jobs/full-stack-software-engineer-b4_w8-ImSr5BBedG1ZS6tF?utm_source=LINKEDIN&utm_medium=referrer
+https://careers.jobscore.com/careers/dialpad/jobs/full-stack-software-engineer-b4_w8-ImSr5BBedG1ZS6tF?utm_source=LINKEDIN&utm_medium=referrer
+http://www.jobspringpartners.com/tech-jobs/silicon-valley-ca/front-end/full-stack-software-engineer/259276
+https://intel.taleo.net/careersection/10020/jobdetail.ftl?job=787499%E2%8C%A9en
+https://www.roberthalf.com/technology/job-search/san-francisco-ca/full-stack-software-engineer/43552243
+Element is not currently visible and so may not be interacted with
+https://sjobs.brassring.com/TGWebHost/jobdetails.aspx?siteid=241&partnerid=514&jobid=1174601
+http://jobs.bvp.com/jobdetail.php?jobid=485462
+http://jobs.bvp.com/jobdetail.php?jobid=467926
+https://kolau.workable.com/jobs/221717
+http://naturebox.applytojob.com/apply/job_20131231013329_LCTL6CRV9IKUKFQP/FullStack-Software-Engineer?source=LILI
+unable to locate element, using {:id=>"resumator-relocate-value", :tag_name=>"select"}
+Locating textareas with '#text_field' is deprecated. Please, use '#textarea' method instead.
+Locating textareas with '#text_field' is deprecated. Please, use '#textarea' method instead.
+http://paysimple.atsondemand.com/index.cfm?fuseaction=512301.viewjobdetail&CID=512301&JID=524977&source=LinkedIn
+https://careers.jobscore.com/careers/towerdata/jobs/full-stack-software-engineer-bngcdClfar45UYiGakhP3Q?utm_source=LINKEDIN&utm_medium=referrer
+https://hire.jobvite.com/CompanyJobs/Careers.aspx?c=q999Vfw6&j=ohsu2fwZ&nl=1&page=Job+Description&s=LINKEDIN
+unable to locate element, using {:class=>"action", :tag_name=>"div"}
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:536:in `assert_element_found'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:508:in `assert_exists'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:561:in `ensure_context'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:545:in `locate'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:505:in `assert_exists'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:114:in `click'
+/Users/prince/Desktop/Job-Application-automation-tool/jobFrameworl.rb:157:in `jobvite'
+/Users/prince/Desktop/Job-Application-automation-tool/jobFrameworl.rb:121:in `block (3 levels) in jobLinkedIn'
+/Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.53.0/lib/selenium/webdriver/common/target_locator.rb:73:in `window'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/window.rb:193:in `use'
+/Users/prince/Desktop/Job-Application-automation-tool/jobFrameworl.rb:106:in `block (2 levels) in jobLinkedIn'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:67:in `call'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:67:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:405:in `block (2 levels) in spawn_thread'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:372:in `loop'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:372:in `block in spawn_thread'
+https://jobs.americanexpress.com/jobs/15020432/New-York-New-York-Software-Engineer-Full-Stack?lang=en-US&src=JB-10463
+https://jobs.americanexpress.com/jobs/15020432/New-York-New-York-Software-Engineer-Full-Stack?lang=en-US&src=JB-10463
+https://www.disabledperson.com/jobs/8891214-software-engineer-full-stack
+https://www.leanplum.com/company/jobs?gh_jid=126620&gh_src=x5h0oy
+https://www.beaconhillstaffing.com/Job-Search/Job-Details?JobID=44116
+http://cultivationcapital.applytojob.com/apply/job_20160127170104_9KX8ERXVQOS2Q2YQ/Full-Stack-Software-Engineer?source=LILI
+unable to locate element, using {:id=>"resumator-citizen-value", :tag_name=>"select"}
+unable to locate element, using {:id=>"resumator-relocate-value", :tag_name=>"select"}
+Locating textareas with '#text_field' is deprecated. Please, use '#textarea' method instead.
+Locating textareas with '#text_field' is deprecated. Please, use '#textarea' method instead.
+unable to locate element, using {:id=>"resumator-submit-resume", :tag_name=>"a"}
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:536:in `assert_element_found'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:508:in `assert_exists'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:114:in `click'
+/Users/prince/Desktop/Job-Application-automation-tool/jobFrameworl.rb:253:in `applytojobfromLinkedIn'
+/Users/prince/Desktop/Job-Application-automation-tool/jobFrameworl.rb:119:in `block (3 levels) in jobLinkedIn'
+/Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.53.0/lib/selenium/webdriver/common/target_locator.rb:73:in `window'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/window.rb:193:in `use'
+/Users/prince/Desktop/Job-Application-automation-tool/jobFrameworl.rb:106:in `block (2 levels) in jobLinkedIn'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:67:in `call'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:67:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:405:in `block (2 levels) in spawn_thread'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:372:in `loop'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:372:in `block in spawn_thread'
+https://lmig.taleo.net/careersection/lmigcorp/jobdetail.ftl?job=71093%E2%8C%A9en
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:536:in `assert_element_found'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:508:in `assert_exists'
+/Library/Ruby/Gems/2.0.0/gems/watir-webdriver-0.9.1/lib/watir-webdriver/elements/element.rb:114:in `click'
+/Users/prince/Desktop/Job-Application-automation-tool/jobFrameworl.rb:144:in `block (2 levels) in jobLinkedIn'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:67:in `call'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:67:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:405:in `block (2 levels) in spawn_thread'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:372:in `loop'
+/Library/Ruby/Gems/2.0.0/gems/thread-0.2.2/lib/thread/pool.rb:372:in `block in spawn_thread'
+Successfully excecuted for all sites
+/Users/prince/Desktop/Job-Application-automation-tool/jobRunner.rb:70:in `<top (required)>'
+/Users/prince/.gem/ruby/2.0.0/gems/ruby-debug-ide-0.6.0/lib/ruby-debug-ide.rb:88:in `debug_load'
+/Users/prince/.gem/ruby/2.0.0/gems/ruby-debug-ide-0.6.0/lib/ruby-debug-ide.rb:88:in `debug_program'
+/Users/prince/.gem/ruby/2.0.0/gems/ruby-debug-ide-0.6.0/bin/rdebug-ide:130:in `<top (required)>'
+-e:1:in `load'
+-e:1:in `<main>'
+Uncaught exception: undefined local variable or method `browser' for main:Object
+	/Users/prince/Desktop/Job-Application-automation-tool/jobRunner.rb:76:in `rescue in <top (required)>'
+	/Users/prince/Desktop/Job-Application-automation-tool/jobRunner.rb:30:in `<top (required)>'
+
+Process finished with exit code 0

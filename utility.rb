@@ -309,6 +309,8 @@ class Utility
     if user_agent == 'Desktop'
       if browser_type == 'Firefox'
         b=Watir::Browser.new
+        b.send_keys [:command, :subtract]
+        b.send_keys [:command, :subtract]
         return b
       elsif browser_type == 'Chrome'
         b = Watir::Browser.new :chrome
@@ -321,6 +323,8 @@ class Utility
     else
       b=Watir::Browser.new
       b.manage.window.maximize
+      b.send_keys [:command, :subtract]
+      b.send_keys [:command, :subtract]
       return b, d
     end
 # browser_type = @@configuration["browser_type"]

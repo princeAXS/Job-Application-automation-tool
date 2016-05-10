@@ -1,6 +1,6 @@
 {
   "allJobSite":["linkedIn","smartRecruiter","workbridgeassociates","jobscore","Ziprecruiter","glassDoor","jobvite"],
-  "jobSitetoApply":["linkedIn"],
+  "jobSitetoApply":["smartRecruiter"],
   "siteUrls":{
     "linkedIn":"https://www.linkedin.com/",
     "Ziprecruiter":"https://www.ziprecruiter.com/",
@@ -8,9 +8,62 @@
     "glassDoor":"https://www.glassdoor.com",
     "smartRecruiter": "https://jobs.smartrecruiters.com/"
   },
-  "jobSearchKeywords":["Jr web developer","Junior web developer"],
-  "alljobSearchKeywords":["Jr software engineer","Jr web developer","Junior web developer","jr full stack","junior full stack","junior software engineer","junior software developer"],
+  "jobSearchKeywords":["software engineer","Jr software engineer","junior software engineer","software developer","junior software developer","web developer","Full Stack Software Engineer","Jr software developer","Jr web developer","Junior web developer","jr full stack","junior full stack"],
+  "alljobSearchKeywords":["software engineer","Jr software engineer","junior software engineer","software developer","junior software developer","web developer","Full Stack Software Engineer","Jr software developer","Jr web developer","Junior web developer","jr full stack","junior full stack"],
   "browser":["Firefox"],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   "userCredentials":{
     "Ziprecruiter": {
      "user":"phemraja@usc.edu",
@@ -28,6 +81,10 @@
       "user":"",
       "pass":""
     },
+    "jobscore":{
+      "user":"phemraja@usc.edu",
+      "pass" : "9597451273ph"
+    },
 
 
     "basic":{
@@ -36,8 +93,10 @@
       "phNo" : "3237159868",
       "email": "phemraja@usc.edu"
     },
-    "resume": "/Users/prince/Desktop/PRINCE_HEMRAJANI_RESUME.pdf",
-    "resumeToPaste" : ""
+    "resume": "/Users/prince/Desktop/PRINCE_HEMRAJANI_Resume_new.pdf",
+    "resumeToPaste" : "",
+    "whyUnique": "I have developed my own automation tool to fill job application . This application is also done by the tool automatically unlike other candidates.",
+    "CV": "Hello,Greetings.My name is Prince Hemrajani, Computer science graduate student at USC, will be graduating in May 2016. I have been doing an internship as a full stack developer at Outbox AXS LLC since May 2015.During Internship I have showed my ability of grasping new things very quickly. I have in-depth knowledge of technologies such as node.js, symphony, twig, troubleshoot email rendering  issue  indifferent  email clients  such as  all  versions  of  outlook, android, iPhone(s), apple mail and many more. I have been a part of development of an admin tool for developers which increased the efficiency of on-boarding of responsive email templates process for drag and drop portal for clients.I have also developed a business intelligence tool called “Crowd Connector” to visualize user activity at a particular location using beacon technology to get the user count in a particular area and Google maps.Adapting to various work cultures, identifying and resolving bottlenecks and prioritizing have been striking features of my working style. In addition to the above, I strongly believe in learning and sharing my knowledge with my colleagues. I am keen to learn and am sharp at identifying and solving problems.With all this practical knowledge and passion of mine in the field of full stack development I would like to request you for considering my candidature for the full stack developer position and give me a chance to demonstrate my skills in your esteemed company.I would be obliged by your kind action.Thanking you Regards Prince Hemrajani"
   }
 
 }
